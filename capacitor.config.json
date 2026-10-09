@@ -1,0 +1,6 @@
+{
+  "appId": "com.milocal.puntodeventa",
+  "appName": "Punto de Venta",
+  "webDir": "www",
+  "server": { "androidScheme": "https" }
+}

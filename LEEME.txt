@@ -1,0 +1,51 @@
+PUNTO DE VENTA - APLICACION ANDROID (APK)
+
+OPCION A (RECOMENDADA): crear el APK en la nube, sin instalar nada
+------------------------------------------------------------------
+1. Crea una cuenta gratis en https://github.com y un repositorio nuevo
+   (boton "New"). Puede ser privado.
+2. Descomprime esta carpeta. En el repositorio pulsa "uploading an existing
+   file" y arrastra TODO el contenido de la carpeta: "www", ".github",
+   "package.json", "capacitor.config.json" y ".gitignore".
+   (Si no se sube la carpeta ".github", crea el archivo con "Add file >
+   Create new file", ponle el nombre ".github/workflows/apk.yml" y pega el
+   contenido de ese archivo.)
+3. Pulsa "Commit changes". Se abre la pestaña "Actions" y empieza a crearse
+   el APK (tarda unos 5-10 minutos). Tambien puedes lanzarlo a mano en
+   Actions > "Crear APK" > "Run workflow".
+4. Cuando termine con una palomita verde, entra a esa ejecucion y baja el
+   archivo "punto-de-venta-apk" (Artifacts). Descomprimelo: dentro esta
+   "app-debug.apk".
+5. Pasa el APK al celular o tablet (cable, Drive, correo, WhatsApp...).
+6. Abrelo en el Android. Si pide permiso, activa "Instalar apps de origen
+   desconocido" para esa aplicacion. Instala y abre "Punto de Venta".
+
+OPCION B: crearlo en tu computadora (necesita Android Studio)
+------------------------------------------------------------------
+1. Instala Node.js LTS (nodejs.org) y Android Studio (developer.android.com).
+2. En esta carpeta, en una terminal:
+      npm install
+      npx cap add android
+      npx cap sync android
+      npx cap open android
+3. En Android Studio: Build > Build Bundle(s) / APK(s) > Build APK(s).
+   El archivo queda en android/app/build/outputs/apk/debug/app-debug.apk
+
+LO QUE FUNCIONA EN ANDROID
+- Todo el programa: vender, categorias, productos con imagen, pedidos en
+  pestañas y en espera, usuarios (administrador, trabajadores, invitado),
+  anular ventas, cierre de turno, datos y ajustes. Sin internet.
+- Copia de seguridad: "Descargar copia" abre el menu de compartir de Android
+  (guardar en Drive, enviar por WhatsApp, etc.). "Restaurar copia" permite
+  elegir el archivo guardado.
+
+LIMITACIONES DE ESTA VERSION
+- La impresion de tickets y del cierre de turno NO esta disponible en
+  Android (avisa en pantalla). Para imprimir se necesitaria agregar un
+  complemento de impresora (por ejemplo Bluetooth termica).
+- El APK es de prueba ("debug"): sirve para instalar y usar en tus equipos,
+  pero no se puede publicar en Google Play sin firmarlo.
+- Los datos se guardan en cada dispositivo. Si desinstalas la aplicacion se
+  borran: haz copias de seguridad.
+- Para cambiar el icono o el nombre hay que editar el proyecto Android
+  (se puede hacer despues).

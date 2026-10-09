@@ -1,0 +1,15 @@
+{
+  "name": "punto-de-venta-android",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Punto de venta para local de comida rápida (Android)",
+  "dependencies": {
+    "@capacitor/android": "^6.2.0",
+    "@capacitor/core": "^6.2.0",
+    "@capacitor/filesystem": "^6.0.2",
+    "@capacitor/share": "^6.0.3"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^6.2.0"
+  }
+}
